@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  /* clr primary */
+
+  --clr-Bright-orange: hsl(31, 77%, 52%);
+  --clr-cyan-600: hsl(184, 100%, 22%);
+  --clr-cyan-900: hsl(179, 100%, 13%);
+
+  /* color secondary */
+  --clr-Transparent-white: hsla(0, 0%, 100%, 0.75); /* for paragraphs */
+  --clr-light-gray-100: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+
+  --ff-para: "Lexend Deca";
+  --ff-btn-head: "Big Shoulders Display";
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  font-family: var(--ff-para);
+  font-size: 1.5rem;
+}
+h2 {
+  font-family: var(--ff-btn-head);
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  color: var(--clr-light-gray-100);
+  font-size: 3rem;
+}
+
+p {
+  color: var(--clr-Transparent-white);
+  line-height: 1.6;
+  letter-spacing: 0.8px;
+}
+.container {
+  max-width: 114rem;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var(--clr-light-gray-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+    .container{
+        padding: 5rem 2rem;
+    }
+}
+.cards {
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+.card {
+  max-width: 30rem;
+  display: inline-block;
+  padding: 4rem 3rem 4rem 3rem;
+}
+.card--orange {
+  background-color: var(--clr-Bright-orange);
+}
+.card--cyan-dark {
+  background-color: var(--clr-cyan-900);
+}
+.card--cyan-light {
+  background-color: var(--clr-cyan-600);
+}
+.btn:link,
+.btn:visited,
+.btn:active {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  background-color: var(--clr-light-gray-100);
+  display: inline-block;
+  margin-top: 8rem;
+  border: 0.2rem solid var(--clr-light-gray-100);
+  transition: 0.2s all;
+}
+.btn:hover {
+  background-color: transparent;
+  color: var(--clr-light-gray-100);
+}
+
+/* button with orange text color */
+
+.btn--orange {           
+  color: var(--clr-Bright-orange);
+}
+
+/* button with cyan-light text color */
+.btn--cyan-light {
+  color: var(--clr-cyan-600);
+}
+
+/* button with cyan-dark text color */
+.btn--cyan-dark {
+  color: var(--clr-cyan-900);
+}
+
+/* border-radius defination for cards with helper class */
+.br--right {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.br--left {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
